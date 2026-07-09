@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commit to Code: The Git & GitHub Blueprint</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scroll-meter" id="scrollMeter"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Course home">
+      <span class="brand-mark">⌁</span>
+      <span><strong>Commit to Code</strong><small>Git & GitHub Blueprint</small></span>
+    </a>
+    <label class="search-wrap" for="searchInput">
+      <span>⌕</span>
+      <input id="searchInput" type="search" placeholder="Search lessons, commands, questions...">
+    </label>
+    <div class="top-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">☾</button>
+      <button class="icon-btn menu-btn" id="menuToggle" aria-label="Toggle navigation" title="Menu">☰</button>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="progress-card">
+      <span>Course Progress</span>
+      <strong id="progressText">0%</strong>
+      <div class="bar"><i id="progressBar"></i></div>
+    </div>
+    <nav id="sideNav" aria-label="Course sections"></nav>
+  </aside>
+
+  <main id="top" class="course-shell">
+    <section class="hero">
+      <div class="hero-bg" role="img" aria-label="Developers collaborating around code"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Live workshop learning platform</p>
+        <h1>Commit to Code: The Git & GitHub Blueprint</h1>
+        <p>From your first `git status` to professional pull requests, releases, recovery, branching strategy, and interview readiness.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#introduction">Start Learning</a>
+          <a class="btn ghost" href="#cheat-sheet">Open Cheat Sheet</a>
+        </div>
+        <div class="hero-stats">
+          <span><strong>30</strong> guided modules</span>
+          <span><strong>100</strong> interview questions</span>
+          <span><strong>100</strong> interactive MCQs</span>
+          <span><strong>2-3 hr</strong> workshop ready</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <article class="content">
+        <section class="course-tools">
+          <div class="tool-panel command-panel">
+            <div>
+              <p class="eyebrow">Command Playground</p>
+              <h2>Try Git commands safely</h2>
+              <p>This simulator explains common commands without touching your computer.</p>
+            </div>
+            <div class="terminal">
+              <label for="playgroundInput">$</label>
+              <input id="playgroundInput" value="git status" spellcheck="false">
+              <button id="runCommand">Run</button>
+            </div>
+            <pre id="playgroundOutput">On branch main
+nothing to commit, working tree clean</pre>
+          </div>
+          <div class="tool-panel flashcard-panel">
+            <p class="eyebrow">Flashcards</p>
+            <button id="flashcard" class="flashcard" aria-live="polite">
+              <strong id="flashTerm">Repository</strong>
+              <span id="flashDefinition">A project folder whose history is tracked by Git.</span>
+              <small>Click for another card</small>
+            </button>
+          </div>
+        </section>
+
+        <div id="searchResults" class="search-results" hidden></div>
+        <div id="sections"></div>
+      </article>
+
+      <aside class="toc">
+        <div class="toc-card">
+          <p class="eyebrow">On this page</p>
+          <div id="tocList"></div>
+        </div>
+      </aside>
+    </div>
+
+    <nav class="lesson-nav" aria-label="Lesson navigation">
+      <button id="prevLesson">← Previous</button>
+      <button id="nextLesson">Next →</button>
+    </nav>
+  </main>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
